@@ -17,7 +17,7 @@ import java.util.List;
  *  as well, since our Domain Services must be able to handle the results of Fired Events.
  * */
 
-public interface OrderDomainInterface {
+public interface OrderDomainService {
 
     OrderCreatedEvent validateAndInitiateOrder(Order order, Restaurant restaurant);
 

@@ -142,7 +142,7 @@ public class Order extends AggregateRoot<OrderId> {
         return price;
     }
 
-    public List<OrderItem> getItem() {
+    public List<OrderItem> getItems() {
         return items;
     }
 
