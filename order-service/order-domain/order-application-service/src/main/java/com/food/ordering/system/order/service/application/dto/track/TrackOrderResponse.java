@@ -31,6 +31,9 @@ public class TrackOrderResponse {
     public List<String> getFailureMessages() {
         return failureMessages;
     }
+    public static Builder builder() {
+        return new Builder();
+    }
 
     private TrackOrderResponse(Builder builder) {
         orderTrackingId = builder.orderTrackingId;
@@ -38,17 +41,12 @@ public class TrackOrderResponse {
         failureMessages = builder.failureMessages;
     }
 
-
     public static final class Builder {
         private UUID orderTrackingId;
         private OrderStatus orderStatus;
         private List<String> failureMessages;
 
         private Builder() {
-        }
-
-        public static Builder builder() {
-            return new Builder();
         }
 
         public Builder orderTrackingId(UUID val) {
